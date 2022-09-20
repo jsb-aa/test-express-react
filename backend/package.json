@@ -10,7 +10,7 @@
     "start:development": "nodemon -r dotenv/config ./bin/www",
     "start:production": "node ./bin/www",
     "db:setup": "dotenv sequelize db:create && dotenv sequelize db:migrate && dotenv sequelize db:seed:all",
-    "render-db:setup": "dotenv sequelize db:migrate && dotenv sequelize db:seed:all"
+    "render-db:setup": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
